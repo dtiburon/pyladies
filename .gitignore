@@ -8,4 +8,7 @@ include
 *.pyc
 *.db
 *.log
+
+*.swp
+
 local_settings.py
