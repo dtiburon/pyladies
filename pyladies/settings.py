@@ -110,6 +110,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
+    'taggit',
+    'pyladies.blog',
     'pyladies.calendar',
 )
 
