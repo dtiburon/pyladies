@@ -12,3 +12,8 @@ include
 *.swp
 
 local_settings.py
+
+admin
+grappelli
+
+.sass-cache
