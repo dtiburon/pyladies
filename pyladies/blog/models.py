@@ -8,7 +8,7 @@ from taggit.managers import TaggableManager
 
 class BlogPostManager(models.Manager):
     def get_published(self):
-        return self.filter(published=True)
+        return self.filter(published=True).order_by('-pub_date')
 
 class BlogPost(models.Model):
     title = models.CharField(_('title'), max_length=200)
@@ -27,3 +27,7 @@ class BlogPost(models.Model):
 
     def __unicode__(self):
         return "Blog: %s" % (self.title)
+
+    def get_absolute_url(self):
+        return "/blog/%s/%s/%s/%s" % (self.pub_date.year,self.pub_date.month,self.pub_date.day,\
+            self.slug)
