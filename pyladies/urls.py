@@ -9,7 +9,7 @@ urlpatterns = patterns('',
     
     url(r'^$', 'pyladies.homepage.views.home_page', name='home_page'),
     url(r'^blog/', include('pyladies.blog.urls')),
-    url(r'^calendar/', include('pyladies.calendar.urls')),
+    url(r'^events/', include('pyladies.calendar.urls')),
     url(r'^chapters/', include('pyladies.chapters.urls')),
     url(r'^jobs/', include('pyladies.jobs.urls')),
     url(r'^sponsors/', include('pyladies.sponsors.urls')),
