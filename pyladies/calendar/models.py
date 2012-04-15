@@ -1,8 +1,7 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
-from pyladies.utils.choices import PYLADIES_CHAPTERS
 from taggit.managers import TaggableManager
-
+from pyladies.chapters.models import Chapter
 
 EVENT_TYPE = (
     ('HA','Hackathon'),
@@ -21,7 +20,7 @@ class Event(models.Model):
     title = models.CharField(_('title'), max_length=200)
     slug = models.SlugField(_('slug'))
     event_type = models.CharField(_('event type'),max_length=2,choices=EVENT_TYPE)
-    chapter = models.CharField(_('chapter'),max_length=3,choices=PYLADIES_CHAPTERS)
+    chapter = models.ForeignKey(Chapter)
     description = models.TextField(_('description'), blank=True)
     active = models.BooleanField(_('active'),default=True)
     start_date = models.DateField(_('start date'))

@@ -1,6 +1,5 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
-from pyladies.utils.choices import PYLADIES_CHAPTERS
 from taggit.managers import TaggableManager
 
 SPONSOR_LEVEL = (

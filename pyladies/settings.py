@@ -117,6 +117,7 @@ INSTALLED_APPS = (
     'taggit',
     'pyladies.blog',
     'pyladies.calendar',
+    'pyladies.chapters',
     'pyladies.jobs',
     'pyladies.sponsors',
 

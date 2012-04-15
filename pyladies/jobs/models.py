@@ -1,6 +1,5 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
-from pyladies.utils.choices import PYLADIES_CHAPTERS
 from pyladies.sponsors.models import Sponsor
 from taggit.managers import TaggableManager
 

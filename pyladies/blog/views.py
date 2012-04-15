@@ -1,22 +1,24 @@
 from django.views.generic import DetailView,ListView
 from django.http import HttpResponseRedirect,HttpResponse
-from pyladies.blog.models import Author,BlogPost
+from pyladies.blog.models import BlogPost
+from pyladies.chapters.models import Member
 import json
-
-class AuthorList(ListView):
-    model = Author
-    context_object_name = "author_list"
-    template_name = "blog/author_list.html"
-
-class AuthorDetail(DetailView):
-    model = Author
-    context_object_name = "author"
-    template_name = "blog/author_detail.html"
 
 class BlogPostList(ListView):
     model = BlogPost
     context_object_name = "blog_post_list"
     template_name = "blog/post_list.html"
+
+    def get_queryset(self):
+        author_slug = self.get('author_slug')
+        if author_slug:
+            try:
+                member = Member.objects.get(slug = author_slug)
+                return BlogPost.objects.get_active().filter(member=member)
+            except Member.DoesNotExist:
+                pass
+        return BlogPost.objects.get_active()
+
 
 class BlogPostDetail(DetailView):
     model = BlogPost

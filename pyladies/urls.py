@@ -7,8 +7,9 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'pyladies.views.home', name='home'),
-    url(r'^calendar/', include('pyladies.calendar.urls')),
     url(r'^blog/', include('pyladies.blog.urls')),
+    url(r'^calendar/', include('pyladies.calendar.urls')),
+    url(r'^chapters/', include('pyladies.chapters.urls')),
     url(r'^jobs/', include('pyladies.jobs.urls')),
     url(r'^sponsors/', include('pyladies.sponsors.urls')),
 
