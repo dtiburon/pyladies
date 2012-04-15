@@ -5,8 +5,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Examples:
-    
+
     url(r'^$', 'pyladies.homepage.views.home_page', name='home_page'),
     url(r'^blog/', include('pyladies.blog.urls')),
     url(r'^events/', include('pyladies.calendar.urls')),
@@ -17,7 +16,6 @@ urlpatterns = patterns('',
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
-    # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
     url(r'^grappelli/', include('grappelli.urls')),
 

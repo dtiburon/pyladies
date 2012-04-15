@@ -28,13 +28,13 @@
 
             <nav>
                 <ul>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Events</a></li>
-                    <li><a href="">Resources</a></li>
-                    <li><a href="">Calendar</a></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="">Sponsors</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="/about/">About</a></li>
+                    <li><a href="/events/">Events</a></li>
+                    <li><a href="/resources/">Resources</a></li>
+                    <li><a href="/calendar/">Calendar</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/sponsors/">Sponsors</a></li>
+                    <li><a href="/contact/">Contact</a></li>
                 </ul>
             </nav>
 
@@ -46,40 +46,8 @@
 
         <div id="main" role="main">
 
-            {% block content %}
-                
-            <div class="mission-statement">
-                <p>Our mission is to increase diversity in the Python community through education, events, mentorship, and outreach. Anyone with an interest in Python is encouraged to participate.</p>
-            </div>
+            {% block content %}{% endblock content %}
 
-            <p>We currently have events in Los Angeles, Washington D.C., and San Francisco. Want PyLadies in your area? Start one!</p>
-
-            <div class="upcoming">
-
-                <h3>Upcoming Events</h3>
-                <ul>
-                    <li>Python Workshop</li>
-                    <li>Social Event</li>
-                </ul>
-
-            </div>
-
-            <div class="upcoming">
-
-                <h3>Latest Blog Post</h3>
-                <p>Some Entry Snippet here</p>
-
-            </div>
-
-            <div class="mailchimp">
-                <form action="http://pyladies.us2.list-manage.com/subscribe/post?u=9d20e0bc6bc0e88a076738c6f&amp;id=23e4f35e45" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-                    <label for="mce-EMAIL">Subscribe to our Mailing List</label>
-                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-                    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-                </form>
-            </div>
-
-            {% endblock content %}
         </div>
 
         <footer>
