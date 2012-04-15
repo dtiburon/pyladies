@@ -87,6 +87,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
@@ -110,9 +111,12 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
+    'debug_toolbar',
     'taggit',
     'pyladies.blog',
     'pyladies.calendar',
+    'pyladies.jobs',
+
 )
 
 # A sample logging configuration. The only tangible logging
@@ -143,6 +147,8 @@ LOGGING = {
         },
     }
 }
+
+INTERNAL_IPS = ('127.0.0.1',)
 
 
 from local_settings import *
