@@ -4,4 +4,5 @@ wsgiref==0.1.2
 
 # add ons
 django-taggit==0.9.3
+django-grappelli
 django-debug-toolbar==0.9.4
