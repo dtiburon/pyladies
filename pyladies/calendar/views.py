@@ -6,9 +6,9 @@ import json
 class EventList(ListView):
     model = Event
     context_object_name = "event_list"
-    template_name = "calendar/event_list.html"
+    template_name = "events/event_list.html"
 
 class EventDetail(DetailView):
     model = Event
     context_object_name = "event"
-    template_name = "calendar/event_detail.html"
+    template_name = "events/event_detail.html"
