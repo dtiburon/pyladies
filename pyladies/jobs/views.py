@@ -1,6 +1,6 @@
 from django.views.generic import DetailView,ListView
 from django.http import HttpResponseRedirect,HttpResponse
-from pyladies.jobs.models import Job,Sponsor
+from pyladies.jobs.models import Job
 import json
 
 class JobList(ListView):
@@ -13,12 +13,4 @@ class JobDetail(DetailView):
     context_object_name = "job"
     template_name = "jobs/job_detail.html"
 
-class SponsorList(ListView):
-    model = Sponsor
-    context_object_name = "sponsor_list"
-    template_name = "jobs/sponsor_list.html"
 
-class SponsorDetail(DetailView):
-    model = Sponsor
-    context_object_name = "sponsor"
-    template_name = "jobs/sponsor_detail.html"

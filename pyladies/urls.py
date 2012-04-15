@@ -10,6 +10,7 @@ urlpatterns = patterns('',
     url(r'^calendar/', include('pyladies.calendar.urls')),
     url(r'^blog/', include('pyladies.blog.urls')),
     url(r'^jobs/', include('pyladies.jobs.urls')),
+    url(r'^sponsors/', include('pyladies.sponsors.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

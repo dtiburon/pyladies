@@ -116,6 +116,7 @@ INSTALLED_APPS = (
     'pyladies.blog',
     'pyladies.calendar',
     'pyladies.jobs',
+    'pyladies.sponsors',
 
 )
 
