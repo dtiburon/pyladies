@@ -1,3 +1,7 @@
+import os
+
+DIRNAME = os.path.dirname(__file__)
+
 # Django settings for pyladies project.
 
 DEBUG = True
@@ -61,6 +65,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    os.path.join(DIRNAME, 'static'),
 )
 
 ADMIN_MEDIA_PREFIX = STATIC_URL + "grappelli/"
@@ -104,6 +109,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    os.path.join(DIRNAME, 'templates'),
 )
 
 INSTALLED_APPS = (

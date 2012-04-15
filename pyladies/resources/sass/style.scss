@@ -1,0 +1,163 @@
+// CSS normalize.css reset
+@import "modules/normalize";
+
+// See modules/_base.scss
+@import "modules/base";
+
+@import "partials/header";
+@import "partials/footer";
+@import "partials/ie";
+
+@font-face {
+    font-family: 'CodeProDemoRegular';
+    src: url('../fonts/Code_Pro_Demo-webfont.eot');
+    src: url('../fonts/Code_Pro_Demo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Code_Pro_Demo-webfont.woff') format('woff'),
+         url('../Code_Pro_Demo-webfont.ttf') format('truetype'),
+         url('../Code_Pro_Demo-webfont.svg#CodeProDemoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    @include typeface;
+    color: #333;
+}
+
+ul {
+	margin: 0 0 0 -20px;
+}
+
+h3 {
+	font-size: 20px;
+	color: #FA023C;
+	margin-bottom: 5px;
+}
+
+p {
+	margin-top: 5px;
+}
+
+#container {
+
+	aside {
+		width: 350px;
+		position: fixed;
+		height: auto;
+		bottom: 0;
+		top: 0;
+		left: 0;
+
+		font-family: 'CodeProDemoRegular';
+		display: block;
+
+		color: #fff;
+		padding: 50px 90px 50px 0;
+		background: #FA023C;
+		border-right: 1px solid #f36f6f;
+		float: left;
+		text-align: right;
+
+		@include box-shadow(#f36f6f 5px 1px 20px);
+
+		@include text-shadow(#f36f6f 2px 2px 10px);
+
+		a {
+			color: #fff;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+
+		header h1 {
+			margin: 0 0 20px 0;
+			text-indent: -9999px;
+			background: url(../img/pyladies.png) top left no-repeat;
+			width: 300px;
+			height: 0px;
+			float: right;
+			padding: 128px 0 0 0;
+			overflow: hidden;
+			display: block;
+
+			a {
+				width: inherit;
+				height: 150px;
+				margin-top: -155px;
+				display: block;
+				text-indent: -9999px;
+			}
+		}
+
+		nav ul {
+			padding: 20px 0 0 0;
+
+			li {
+				padding: 0 0 25px 0;
+				font-size: 30px;
+			}
+		}
+
+		.linode {
+			background: url(../img/linode.png) top left no-repeat;
+			width: 150px;
+			height: 60px;
+			padding: 0 0 0 20px;
+			margin: 30px 0 0 0;
+			float: right;
+
+		}
+
+	}
+
+	#main {
+		width: 700px;
+		padding: 50px 0 0 0;
+		margin: 0 0 0 530px;
+		float: left;
+	}
+
+	.mission-statement {
+		padding: 130px 0 0 0;
+		font-size: 23px;
+
+		p {
+			margin-bottom: 10px;
+		}
+	}
+
+	.upcoming {
+		width: 350px;
+		float: left;
+	}
+
+	.mailchimp {
+		padding: 35px 0 0 0;
+		clear: both;
+
+		label {
+			color: #FA023C;
+			font-weight: bold;
+			font-size: 15px;
+			display: block;
+		}
+		input[type="email"] {
+			padding: 5px 10px;
+			margin: 10px 5px 0 0;
+			@include border-radius(7px);
+			border: 1px solid #888;
+			background: #fff;
+		}
+		input[type="submit"] {
+			background: #FA023C;
+			border: none;
+			color: #fff;
+			padding: 5px 10px;
+			@include border-radius(7px);
+		}
+	}
+
+}
