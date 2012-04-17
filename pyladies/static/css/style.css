@@ -49,18 +49,6 @@ body, button, input, select, textarea {
   text-shadow: none;
 }
 
-a {
-  color: #00e;
-}
-
-a:visited {
-  color: #551a8b;
-}
-
-a:hover {
-  color: #06e;
-}
-
 a:focus {
   outline: thin dotted;
 }
@@ -149,7 +137,6 @@ sub {
 
 ul, ol {
   margin: 1em 0;
-  padding: 0 0 0 40px;
 }
 
 dd {
@@ -319,6 +306,12 @@ ul {
   margin: 0 0 0 -20px;
 }
 
+h2 {
+  font-size: 35px;
+  font-family: 'CodeProDemoRegular';
+  margin-bottom: 5px;
+}
+
 h3 {
   font-size: 20px;
   color: #FA023C;
@@ -327,6 +320,14 @@ h3 {
 
 p {
   margin-top: 5px;
+}
+
+a {
+  color: #0042ff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 
 #container aside {
@@ -392,32 +393,33 @@ p {
 }
 #container #main {
   width: 700px;
-  padding: 50px 0 0 0;
+  padding: 60px 0 0 0;
   margin: 0 0 0 530px;
   float: left;
 }
-#container .mission-statement {
-  padding: 130px 0 0 0;
+
+#home .mission-statement {
+  padding: 125px 0 0 0;
   font-size: 23px;
 }
-#container .mission-statement p {
+#home .mission-statement p {
   margin-bottom: 10px;
 }
-#container .upcoming {
+#home .upcoming {
   width: 350px;
   float: left;
 }
-#container .mailchimp {
+#home .mailchimp {
   padding: 35px 0 0 0;
   clear: both;
 }
-#container .mailchimp label {
+#home .mailchimp label {
   color: #FA023C;
   font-weight: bold;
   font-size: 15px;
   display: block;
 }
-#container .mailchimp input[type="email"] {
+#home .mailchimp input[type="email"] {
   padding: 5px 10px;
   margin: 10px 5px 0 0;
   -moz-border-radius: 7px;
@@ -429,7 +431,7 @@ p {
   border: 1px solid #888;
   background: #fff;
 }
-#container .mailchimp input[type="submit"] {
+#home .mailchimp input[type="submit"] {
   background: #FA023C;
   border: none;
   color: #fff;
@@ -440,4 +442,11 @@ p {
   -ms-border-radius: 7px;
   -khtml-border-radius: 7px;
   border-radius: 7px;
+}
+
+#events ul {
+  margin: 0 0 0 -40px;
+}
+#events ul li {
+  list-style: none;
 }

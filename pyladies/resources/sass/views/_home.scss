@@ -1,0 +1,43 @@
+#home {
+
+	.mission-statement {
+		padding: 125px 0 0 0;
+		font-size: 23px;
+
+		p {
+			margin-bottom: 10px;
+		}
+	}
+
+	.upcoming {
+		width: 350px;
+		float: left;
+	}
+
+	.mailchimp {
+		padding: 35px 0 0 0;
+		clear: both;
+
+		label {
+			color: #FA023C;
+			font-weight: bold;
+			font-size: 15px;
+			display: block;
+		}
+		input[type="email"] {
+			padding: 5px 10px;
+			margin: 10px 5px 0 0;
+			@include border-radius(7px);
+			border: 1px solid #888;
+			background: #fff;
+		}
+		input[type="submit"] {
+			background: #FA023C;
+			border: none;
+			color: #fff;
+			padding: 5px 10px;
+			@include border-radius(7px);
+		}
+	}
+
+}

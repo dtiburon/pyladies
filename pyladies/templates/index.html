@@ -2,40 +2,44 @@
 
 {% block content %}
 
-            <div class="mission-statement">
-                <p>{{ home_page_details.mission_statement }}</p>
-            </div>
+            <div id="home">
 
-            <p>{{ home_page_details.content }}</p>
+                <div class="mission-statement">
+                    <p>{{ home_page_details.mission_statement }}</p>
+                </div>
 
-            <div class="upcoming">
+                <p>{{ home_page_details.content }}</p>
 
-                <h3>Upcoming Events</h3>
-                <ul>
-                	{% for event in events|slice:":3" %}
-					<li><a href="/events/{{ event.slug }}">{{ event.title }}</a></li>
-                	{% endfor %}
-                </ul>
+                <div class="upcoming">
 
-            </div>
+                    <h3>Upcoming Events</h3>
+                    <ul>
+                    	{% for event in events|slice:":3" %}
+    					<li><a href="/events/{{ event.slug }}">{{ event.title }}</a></li>
+                    	{% endfor %}
+                    </ul>
 
-            <div class="upcoming">
+                </div>
 
-                <h3>Latest Blog Post</h3>
-                <ul>
-                	{% for blog in blog|slice:":1" %}
-                		<li>{{ blog.title }}</li>
-                	{% endfor %}
-                </ul>
+                <div class="upcoming">
 
-            </div>
+                    <h3>Latest Blog Post</h3>
+                    <ul>
+                    	{% for blog in blog|slice:":1" %}
+                    		<li>{{ blog.title }}</li>
+                    	{% endfor %}
+                    </ul>
 
-            <div class="mailchimp">
-                <form action="http://pyladies.us2.list-manage.com/subscribe/post?u=9d20e0bc6bc0e88a076738c6f&amp;id=23e4f35e45" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-                    <label for="mce-EMAIL">Subscribe to our Mailing List</label>
-                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-                    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-                </form>
+                </div>
+
+                <div class="mailchimp">
+                    <form action="http://pyladies.us2.list-manage.com/subscribe/post?u=9d20e0bc6bc0e88a076738c6f&amp;id=23e4f35e45" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                        <label for="mce-EMAIL">Subscribe to our Mailing List</label>
+                        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                    </form>
+                </div>
+
             </div>
 
 {% endblock content %}
