@@ -383,6 +383,14 @@ a:hover {
   padding: 0 0 25px 0;
   font-size: 30px;
 }
+#container aside ul.social-media {
+  padding: 15px 0 0 0;
+}
+#container aside ul.social-media li {
+  padding: 0 5px;
+  list-style: none;
+  display: inline-block;
+}
 #container aside .linode {
   background: url(../img/linode.png) top left no-repeat;
   width: 150px;
@@ -410,13 +418,15 @@ a:hover {
   float: left;
 }
 #home .mailchimp {
+  width: 350px;
   padding: 35px 0 0 0;
   clear: both;
+  float: left;
 }
 #home .mailchimp label {
   color: #FA023C;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 20px;
   display: block;
 }
 #home .mailchimp input[type="email"] {
@@ -442,6 +452,11 @@ a:hover {
   -ms-border-radius: 7px;
   -khtml-border-radius: 7px;
   border-radius: 7px;
+}
+#home .tweet {
+  color: #666;
+  width: 300px;
+  float: left;
 }
 
 #events ul {
